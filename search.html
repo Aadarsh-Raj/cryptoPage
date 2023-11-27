@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Cryptos</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="search.css">
-<script defer src="search.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="search.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script defer src="search.js"></script>
+  </head>
+  <body>
     <main class="main">
-        <header class="header">
-          <div class="logo">
-            <img
-              src="https://aayusharyan.github.io/cryptoview-project/assets/images/logo.png"
-              alt=""
-            />
-            CryptoEyeShot
-          </div>
-          <div>
-            <a href="search.html" class="search-page">
-              <div>
-                Search Cryptos
-              </div>
-            </a>
-          </div>
-        </header>
-       <section class="search-bar">
+      <header class="header">
+        <div class="logo">
+          <img
+            src="https://aayusharyan.github.io/cryptoview-project/assets/images/logo.png"
+            alt=""
+          />
+          CryptoEyeShot
+        </div>
+        <div>
+          <a href="search.html" class="search-page">
+            <div>Search Cryptos</div>
+          </a>
+        </div>
+      </header>
+      <section class="search-bar">
         <form action="">
-            <input type="text" id="search-input" placeholder="Enter Coin Name">
-            <input type="button" id="search-submit" value="Search">
+          <input type="text" id="search-input" placeholder="Enter Coin Name" />
+          <input type="button" id="search-submit" value="Search" />
         </form>
-       </section>
+      </section>
+
+      <section class="coin-list-container">
+        <ul></ul>
+      </section>
 
 
-       <section class="coin-list-container">
-        <ul>
-      
-        </ul>
-       </section>
-        <footer class="footer">©CryptoEyeShot | Developed by Aadarsh Raj | AryaCoding</footer>
-      </main>
-</body>
+      <section class="crypto-details-container">
+        <span class="material-symbols-outlined close-btn"> cancel </span>
+        <div class="detail-container-left">
+          <img src="" alt="logo" />
+        </div>
+        <div class="detail-container-right">
+          <h2 class="detail-title">Bitcoin</h2>
+          <p class="price-tags">
+            <span>5455</span>
+            <span>55555</span>
+            <span>5555</span>
+            <span>55555</span>
+          </p>
+          <details class="page-description" open>jdfksjaklksk</details>
+        </div>
+      </section>
+      <footer class="footer">
+        ©CryptoEyeShot | Developed by Aadarsh Raj | AryaCoding
+      </footer>
+    </main>
+  </body>
 </html>

@@ -1,60 +1,113 @@
-.search-bar{
-    text-align: center;
+*::-webkit-scrollbar{
+    width: 0;
 }
-.search-bar input{
-   padding: 15px 0.5rem;
+.search-bar {
+  text-align: center;
 }
-#search-input{
-width: 30%;
+.search-bar input {
+  padding: 15px 0.5rem;
 }
-
-.coin-list-container{
-    height: 75%;
-    overflow-y: scroll;
-}
-.coin-list-container ul{
-    width: 85%;
-    margin: auto;
-    list-style: none;
-    text-align: left;
+#search-input {
+  width: 30%;
 }
 
-.coin-item-list{
+.coin-list-container {
+  height: 75%;
+  overflow-y: scroll;
+}
+.coin-list-container ul {
+  width: 85%;
+  margin: auto;
+  list-style: none;
+  text-align: left;
+}
+
+.coin-item-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  border: 4px rgb(218, 92, 92) double;
+}
+.list-left {
+  display: flex;
+  width: 70%;
+  padding: 1rem;
+  gap: 4rem;
+  align-items: center;
+}
+.list-left div {
+  width: 4%;
+}
+.coin-item-list a {
+  text-decoration: none;
+  color: rgb(236, 147, 92);
+  font-weight: bolder;
+  background-color: wheat;
+  margin-right: 0.3rem;
+  border-radius: 0.5rem;
+  transition: 0.4s;
+}
+.coin-item-info-button {
+  padding: 1rem;
+}
+.coin-item-list a:hover {
+  color: wheat;
+  background-color: rgb(236, 147, 92);
+  border-radius: 0.5rem;
+}
+
+.coin-item-logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.crypto-details-container {
+  position: absolute;
+  /* width: 100vw; */
+  top: 35%;
+  height: 75vh;
+  background-color: rgb(249, 129, 129);
+  opacity: 0.8;
+  width: 80%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem 0.2rem 0.5rem 0.5rem;
+
+}
+.detail-container-left{
+    width: 30%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 1rem 0;
-    border: 4px rgb(218, 92, 92) double;
+    justify-content: center;
 }
-.list-left{
-    display: flex;
+.detail-container-right{
     width: 70%;
-    padding:1rem;
-    gap: 4rem;
-    align-items: center;
+    border: 2px solid;
+    padding: 2rem;
 }
-.list-left div{
-    width: 4%;
+.detail-title{
+    color: rgb(255, 216, 118);
+    
 }
-.coin-item-list a{
-    text-decoration: none;
-    color: rgb(236, 147, 92);
-    font-weight: bolder;
-    background-color: wheat;
-    margin-right: 0.3rem;
-    border-radius: 0.5rem;
-    transition: 0.4s;
+.price-tags{
+    display: flex;
+    padding:1rem 1.5rem;
+    justify-content: space-between;
+    color: gray;
 }
-.coin-item-info-button{
-    padding: 1rem;
+.page-description{
+    text-align: left;
+    width: 100%;
+   overflow-y: scroll;
+   color: white;
+   letter-spacing: 0.06rem;
+   font-style: italic;
 }
-.coin-item-list a:hover{
-    color: wheat;
-    background-color: rgb(236, 147, 92);
-    border-radius: 0.5rem;
-}
-
-.coin-item-logo img{
-    width: 35px;
-    height: 35px;
+.close-btn{
+    color: red;
+    height: max-content;
+    background-color: white;
+    border-radius: 0 0 0.5rem 0;
 }
