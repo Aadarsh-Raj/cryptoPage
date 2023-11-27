@@ -3,8 +3,13 @@ const moreInfoContainer = document.querySelector(".crypto-details-container");
 const pageDescription = document.querySelector(".page-description");
 const detailTitle = document.querySelector(".detail-title");
 const closeBtn = document.querySelector(".close-btn");
+const detailsLogoContainer = document.querySelector(".detail-container-left");
+const priceTags = document.querySelector(".price-tags");
+
+
 closeBtn.addEventListener("click", () => {
-  moreInfoContainer.style.display = "none";
+  moreInfoContainer.style.right = "-100%";
+
 });
 
 const showDetails = async (id) => {
@@ -13,12 +18,16 @@ const showDetails = async (id) => {
       `https://api.coingecko.com/api/v3/coins/${id}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`
     );
     const data = await response.json();
-    console.log(data);
-    // detailTitle.innerHTML = id;
-    // console.log(detailTitle);
-    // pageDescription.innerHTML = `${data.description}`;
-    // console.log(pageDescription);
-    // moreInfoContainer.style.display = "flex";
+    console.log(data.image.large);
+    detailTitle.innerHTML = id;
+    pageDescription.innerHTML = `${data.description.en}`;
+    priceTags.innerHTML =`<span>₹${data.market_data.current_price.inr}</span>
+    <span>$${data.market_data.current_price.usd}</span>
+    <span>€${data.market_data.current_price.eur}</span>
+    <span>A$${data.market_data.current_price.aud}</span>`;
+    detailsLogoContainer.innerHTML = `<img src=${data.image.large} alt="logo" />`;
+    moreInfoContainer.style.display = "flex";
+    moreInfoContainer.style.right = "0";
   } catch (e) {
     console.log(e);
   }
@@ -85,7 +94,7 @@ function renderList(arr) {
 fetchCoins();
 
 const searchInput = document.getElementById("search-input");
-const searchSubmit = document.getElementById("search-submit");
+const searchSubmit = document.querySelector("form");
 
 searchInput.addEventListener("keyup", (e) => {
   const searchKey = e.target.value.toLowerCase();
@@ -95,7 +104,7 @@ searchInput.addEventListener("keyup", (e) => {
       ele.name.toLowerCase().includes(searchKey)
   );
 
-  searchSubmit.addEventListener("click", (e) => {
+  searchSubmit.addEventListener("submit", (e) => {
     ul.innerHTML = "";
     // console.log(filteredArray);
     renderList(filteredArray);
@@ -105,6 +114,7 @@ searchInput.addEventListener("keyup", (e) => {
 });
 
 ul.addEventListener("click", (e)=>{
+    e.preventDefault();
     if(e.target.classList.contains("coin-item-info-button")){
         console.log(e.target.id);
         showDetails(e.target.id);

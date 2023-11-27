@@ -64,18 +64,31 @@
 
 .crypto-details-container {
   position: absolute;
-  /* width: 100vw; */
-  top: 35%;
+  top: 18%;
   height: 75vh;
-  background-color: rgb(249, 129, 129);
-  opacity: 0.8;
+  background-color: #ff0000bd;
+  opacity: 0.7;
   width: 80%;
-  right: 0;
-  display: flex;
+  right: -100%;
+  display: none;
   justify-content: center;
   border-radius: 0.5rem 0.2rem 0.5rem 0.5rem;
-
+  animation: slider 3s 1;
+  transition: 3s all;
 }
+@keyframes slider {
+    0%{
+        right: -80%;
+
+    }
+    50%{
+        right: -50%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
 .detail-container-left{
     width: 30%;
     display: flex;
@@ -84,18 +97,18 @@
 }
 .detail-container-right{
     width: 70%;
-    border: 2px solid;
     padding: 2rem;
 }
 .detail-title{
     color: rgb(255, 216, 118);
-    
+    text-transform: capitalize;
 }
 .price-tags{
     display: flex;
     padding:1rem 1.5rem;
     justify-content: space-between;
-    color: gray;
+    color: #565555;
+    font-weight: 800;
 }
 .page-description{
     text-align: left;
@@ -110,4 +123,46 @@
     height: max-content;
     background-color: white;
     border-radius: 0 0 0.5rem 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width:810px) {
+    #search-input{
+        width: 65%;
+    }
+    .list-left{
+        gap: 1rem;
+    }
+    .coin-item-id{
+        display: none;
+    }
+    .coin-list-container ul{
+        width: 98%;
+    }
+  .list-left div{
+    width: 20%;
+  }
+  .detail-container-left img{
+    width: 85px;
+    height: 85px;
+  }
+  .main{
+    position: relative;
+  }
+  .crypto-details-container div{
+    width: 100%;
+  }
+  .crypto-details-container{
+    /* flex-direction: column; */
+    background-color: red;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: start;
+    right: -100%;
+    width: 100%;
+    top: 7%;
+    height: 93vh;
+    overflow-y: scroll;
+  }
+
 }

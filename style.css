@@ -148,7 +148,7 @@ padding: 1rem;
     }
     .page-description{
         font-size: 1rem;
-        padding-top: 0.4rem;
+        padding: 0.4rem;
         width: 100%;
     }
     .page-description p{
@@ -173,6 +173,15 @@ padding: 1rem;
     }
     .top-card-item p{
         margin-top: 0.3rem;
+        font-size: 0.8rem;
+    }
+    .search-page div{
+        font-size: 0.9rem;
+    }
+    .header{
+        padding: 0.8rem;
+    }
+    .footer{
         font-size: 0.8rem;
     }
 }
