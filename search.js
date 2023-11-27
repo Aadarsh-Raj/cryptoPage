@@ -29,7 +29,7 @@ const showDetails = async (id) => {
     moreInfoContainer.style.display = "flex";
     moreInfoContainer.style.right = "0";
   } catch (e) {
-    console.log(e);
+    alert("Please let the page load first or try again sometimes later");
   }
 };
 
@@ -74,7 +74,7 @@ const fetchCoins = async () => {
 
     renderList(dataArr);
   } catch (error) {
-    // console.log(error);
+    alert("Please let the page load first or try again sometimes later");
   }
 };
 
@@ -82,12 +82,6 @@ function renderList(arr) {
   arr.forEach((element) => {
     const coinItemList = createList(element);
     ul.append(coinItemList);
-    // const moreInfo = document.querySelector(".coin-item-info-button");
-
-    // moreInfo.addEventListener("click", (e)=>{
-    //     console.log(element.id);
-    //     showDetails(e, element.id);
-    // });
   });
 }
 
@@ -106,9 +100,7 @@ searchInput.addEventListener("keyup", (e) => {
 
   searchSubmit.addEventListener("submit", (e) => {
     ul.innerHTML = "";
-    // console.log(filteredArray);
     renderList(filteredArray);
-   
     searchInput.value = "";
   });
 });

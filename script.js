@@ -13,7 +13,6 @@ topCardItem.innerHTML =`<div class="card-logo">
 </div>`;
     return topCardItem;
 }
-// https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr
 const fetchTopCardApi = async () => {
     try {
         const response =await fetch("https://api.coingecko.com/api/v3/search/trending");
@@ -28,33 +27,3 @@ const fetchTopCardApi = async () => {
     }
 }
 fetchTopCardApi();
-// const fetchApi = async () =>{
-//     try {
-//     // const response = await fetch("1b251d50-884a-48d6-bac7-48550e6f8458");
-//         // const response = await fetch("https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false");
-//         const response = await fetch("https://api.coingecko.com/api/v3/search");
-//         // response.status = {
-//         //     "timestamp": "2023-11-24T07:33:00.872Z",
-//         //     "error_code": 1002,
-//         //     "error_message": "1b251d50-884a-48d6-bac7-48550e6f8458",
-//         //     "elapsed": 0,
-//         //     "credit_count": 0
-//         // }
-//         console.log(response.json());
-//     } catch (error) {
-//         // console.log(error);
-//     }
-// }
-// console.log("skjda");
-// fetchApi();
-
-// https://api.coingecko.com/api/v3/search?query=Bitcoin
-
-
-// on search
-// https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false
-
-// https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false
-
-
-// https://api.coingecko.com/api/v3/coins/pyth-network?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false
